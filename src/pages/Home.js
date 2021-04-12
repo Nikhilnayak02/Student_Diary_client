@@ -16,7 +16,7 @@ export default function Home() {
 
     // console.log(user.name)
     useEffect(()=>{
-        axios.get('http://127.0.0.1:5000/api/v1/users')
+        axios.get('http://54.173.169.6:5000/api/v1/users')
         .then(res=>{
             // console.log(res)
             setPosts(res.data)
@@ -26,7 +26,7 @@ export default function Home() {
     },[])
 
     useEffect(()=>{
-        axios.get('http://127.0.0.1:5000/api/v1/users/allblogs')
+        axios.get('http://54.173.169.6:5000/api/v1/users/allblogs')
         .then(res=>{
             // console.log()
             setblogs(res.data)

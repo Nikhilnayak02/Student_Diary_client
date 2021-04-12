@@ -17,7 +17,7 @@ export default function PostForm() {
     const [user1,setUser]=useState([])
     
     useEffect(()=>{
-        axios.get('http://127.0.0.1:5000/api/v1/users')
+        axios.get('http://54.173.169.6:5000/api/v1/users')
         .then(res=>{
             // console.log(res)
             setUser(res.data)
@@ -35,7 +35,7 @@ export default function PostForm() {
        setBlogs(blogs);   
     }
         useEffect(()=>{
-            axios.get('http://127.0.0.1:5000/api/v1/users')
+            axios.get('http://54.173.169.6:5000/api/v1/users')
             .then(res=>{
                 // console.log(res)
                 setPosts(res.data)
@@ -78,7 +78,7 @@ export default function PostForm() {
         const b = user.name        
         const a = user1.find(o=>o.name===b)
         var id= a.user_id
-        axios.get('http://127.0.0.1:5000/api/v1/users/blog/'+id)
+        axios.get('http://54.173.169.6:5000/api/v1/users/blog/'+id)
     .then(res=>{
         // console.log()
        
@@ -97,7 +97,7 @@ export default function PostForm() {
         const b =user.name        
         const a = posts.find(o=>o.name===b)
         if(values.post!==""){
-            axios.post('http://127.0.0.1:5000/api/v1/users/'+a.user_id,values)
+            axios.post('http://54.173.169.6:5000/api/v1/users/'+a.user_id,values)
             values.post=""
             
         }else{

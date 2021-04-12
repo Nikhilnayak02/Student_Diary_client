@@ -18,7 +18,7 @@ export default function Login(props) {
     const [posts,setPosts]=useState([])
     const alert = useAlert()
     useEffect(()=>{
-        axios.get('http://127.0.0.1:5000/api/v1/users')
+        axios.get('http://54.173.169.6:5000/api/v1/users')
         .then(res=>{
             // console.log(res)
             setPosts(res.data)
@@ -40,7 +40,7 @@ export default function Login(props) {
     const onSubmit=(e)=>{
         e.preventDefault();
 
-        axios.post("http://127.0.0.1:5000/api/v1/user/login",values).
+        axios.post("http://54.173.169.6:5000/api/v1/user/login",values).
         then((res)=>{ console.log(values);
             context.login({"name":res.data.username})
             props.history.push('/')

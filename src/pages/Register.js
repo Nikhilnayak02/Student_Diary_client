@@ -25,7 +25,7 @@ export default function Register(props) {
     const onSubmit=(e)=>{
         e.preventDefault();
         console.log(values);
-        axios.post('http://127.0.0.1:5000/api/v1/user',values)
+        axios.post('http://54.173.169.6:5000/api/v1/user',values)
         .then(resp=>{
             // console.log(resp)
             context.login(values);

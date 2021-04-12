@@ -83,7 +83,7 @@ export default function Userdetails(props) {
         const b =user.name        
         const a = posts.find(o=>o.name===b)
         
-            axios.put('http://127.0.0.1:5000/api/v1/user/'+a.user_id,values).then(resp=>console.log(resp)) 
+            axios.put('http://54.173.169.6:5000/api/v1/user/'+a.user_id,values).then(resp=>console.log(resp)) 
             alert.show(<div style={{ color: 'green' }}>"Successfully Updated"</div>)
             logout();
             
